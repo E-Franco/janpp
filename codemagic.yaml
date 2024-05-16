@@ -37,7 +37,7 @@ workflows:
           npx cap sync # <- update native dependencies and copy web assets to native project
       - name: Set up code signing settings on Xcode project
         script: |
-          xcode-project use-profiles
+          xcode-project use-profiles --project ios/*.xcodeproj
       - name: Increment build number
         script: |
           cd $CM_BUILD_DIR/ios/App
