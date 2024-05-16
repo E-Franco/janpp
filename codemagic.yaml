@@ -54,14 +54,14 @@ workflows:
       - /tmp/xcodebuild_logs/*.log
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
-    publishing:
-      email:
-        recipients:
-          - elitonfranco.e@gmail.com
-          - elitonfranco.m@gmail.com
-        notify:
-          success: false # To not receive a notification when a build succeeds
-          failure: false # To not receive a notification when a build fails
+    # publishing:
+    #   email:
+    #     recipients:
+    #       - elitonfranco.e@gmail.com
+    #       - elitonfranco.m@gmail.com
+    #     notify:
+    #       success: false # To not receive a notification when a build succeeds
+    #       failure: false # To not receive a notification when a build fails
       # app_store_connect:
         # auth: integration
 
