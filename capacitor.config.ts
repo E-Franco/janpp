@@ -1,7 +1,7 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'doc24app.janpp.com.br',
+  appId: 'janppsaude.janpp.com.br',
   appName: 'JANPP SAUDE',
   webDir: 'www',
   server: {
