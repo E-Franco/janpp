@@ -129,6 +129,7 @@
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 1100;
 						ProvisioningStyle = Automatic;
+            DevelopmentTeam = 54S9LYYAT3;
 					};
 				};
 			};
