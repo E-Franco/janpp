@@ -1,0 +1,24 @@
+<ion-content>
+    <ion-header collapse="condense">
+        <ion-toolbar>
+          <ion-title size="large">Inicio</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-loading trigger="open-loading" message="Aguarde ... " duration="3000"></ion-loading>
+    
+    <div class="row linha-perfil">
+        <div class="col-3 col-foto-perfil">
+          <img src="../assets/avatar_feminino.png" [hidden]="(usuario === null) || (usuario === undefined) || (usuario.Sexo !== 2)"/>
+          <img src="../assets/avatar_masculino.png" [hidden]="(usuario === null) || (usuario === undefined) || (usuario.Sexo !== 1)"/>
+        </div>
+        <div class="col-9 col-nome-perfil">
+          <h5 class="nome">Olá, {{usuario.Nome}}!</h5>
+        </div>
+    </div>
+    <div class="row linha-botoes">
+        <div class="col-12">
+          <a class="btn btn-warning" href="https://janpp.bwfabricadeapps.com.br/cancelamentousuario">Cancelar plano JANPP</a>
+          <button type="button" class="btn btn-danger mt-10" (click)="sair()">Sair</button>
+        </div>
+    </div>
+</ion-content>

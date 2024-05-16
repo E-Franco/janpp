@@ -1,0 +1,149 @@
+@import "../../variaveis.scss";
+
+ion-content{
+    background-color: $cor-primaria;
+
+    .linha-perfil{
+        padding-top: 3%;
+        background-color: $cor-primaria;
+    
+        .col-foto-perfil{
+            img{
+                width: 60px;
+                margin-left: 15%;
+            }
+        }
+    
+        .col-nome-perfil{
+            padding-top: 3%;
+            .nome{
+                font-weight: bold;
+                color: $cor-texto-header;
+                font-weight: bold;
+            }
+        }
+    }
+    
+    .linha-calendario{
+        padding-bottom: 10px;
+        padding-top: 10px;
+        background-color: $cor-primaria;
+    
+        .coluna-calendario{
+            text-align: center;
+    
+            .dia-calendar{
+                width: 14%;
+                display: inline-table;
+    
+                &.dia-selecionado{
+                    background-color: $background-dia-selecionado;
+                    border-radius: 10px;
+                    font-weight: bold;
+                }
+    
+                .dian, .diat{
+                    display: table-row;
+                    text-align: center;
+                    color: $cor-texto-header;
+    
+                    &.selecionado{
+                        color: $cor-texto-dia-selecionado;
+                    }
+                }
+            }
+        }
+    }
+    
+    .bloco-humor{
+        margin-top: 10px;
+        padding-left: 15px;
+    }
+    
+    .bloco-opcoes{
+        .linha-opcao{
+            padding-bottom: 20px;
+            &.beneficio{
+                img{
+                    height: 170px;
+                }
+            }
+    
+            .borda-esquerda{
+                border-top: 1px solid $cor-cinza-claro;
+                border-left: 1px solid $cor-cinza-claro;
+                border-bottom: 1px solid $cor-cinza-claro;
+                border-radius: 10px 0 0 10px;
+            }
+
+            .borda-direita{
+                border-top: 1px solid $cor-cinza-claro;
+                border-right: 1px solid $cor-cinza-claro;
+                border-bottom: 1px solid $cor-cinza-claro;
+                border-radius: 0 10px 10px 0;
+            }
+
+            .coluna-opcao-cuidados-medicos, .coluna-opcao-beneficios, .coluna-opcao-saude-mental{
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &.coluna-opcao-beneficios{
+                    background-color: $cor-primaria;
+
+                    h3{
+                        vertical-align: middle;
+                        color: $cor-texto-botao-beneficios;
+                    }            
+                }
+        
+                &.coluna-opcao-saude-mental{
+                    padding-right: 0;
+                }
+        
+                h3, .descricao-botao{
+                    color: black;
+                    font-weight: bold;
+                }
+            }
+        
+            .coluna-imagem, .coluna-imagem-beneficio, .coluna-imagem-comunidade{
+                cursor: pointer;
+
+                &.coluna-imagem-beneficio{
+                    background-color: $cor-primaria;
+
+                    img{
+                        padding: 20px 0;
+                    }                    
+                }
+
+                &.coluna-imagem-comunidade{
+                    padding: 0;
+                }
+
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    ion-content{        
+        .bloco-opcoes{
+            
+            .linha-opcao{
+                .coluna-imagem, .coluna-imagem-beneficio, .coluna-imagem-comunidade{
+                    img{
+                        height: 250px;
+                    }
+                }
+            }
+            
+        }   
+    }
+}

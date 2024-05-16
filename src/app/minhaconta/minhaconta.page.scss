@@ -1,0 +1,31 @@
+@import "../../variaveis.scss";
+
+ion-content{
+    background-color: $cor-primaria;
+
+    .linha-perfil{
+        padding-top: 3%;
+        background-color: $cor-primaria;
+    
+        .col-foto-perfil{
+            img{
+                width: 60px;
+                margin-left: 15%;
+            }
+        }
+    
+        .col-nome-perfil{
+            padding-top: 3%;
+            .nome{
+                font-weight: bold;
+                color: $cor-texto-header;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .linha-botoes{
+        margin-top: 30px;
+        padding: 0 10px;
+    }
+}

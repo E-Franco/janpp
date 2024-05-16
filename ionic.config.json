@@ -1,0 +1,7 @@
+{
+  "name": "JANPP SAUDE",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

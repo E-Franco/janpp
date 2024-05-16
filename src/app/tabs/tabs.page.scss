@@ -1,0 +1,12 @@
+@import "../../variaveis.scss";
+
+ion-tabs{
+    ion-tab-bar{
+        background-color: $cor-primaria;
+
+        ion-tab-button{
+            background-color: $cor-primaria;
+            color: $cor-text-botao-tab;
+        }
+    }
+}

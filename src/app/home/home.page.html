@@ -1,0 +1,60 @@
+<ion-content [fullscreen]="true">
+  <ion-loading trigger="open-loading" message="Aguarde ... " duration="3000"></ion-loading>
+
+  <div class="row linha-perfil">
+    <div class="col-3 col-foto-perfil">
+      <img src="../assets/avatar_feminino.png" [hidden]="(usuario === null) || (usuario === undefined) || (usuario.Sexo !== 2)"/>
+      <img src="../assets/avatar_masculino.png" [hidden]="(usuario === null) || (usuario === undefined) || (usuario.Sexo !== 1)"/>
+    </div>
+    <div class="col-9 col-nome-perfil">
+      <h5 class="nome">Olá, {{usuario.Nome}}!</h5>
+    </div>
+  </div>
+  <div class="row linha-calendario">
+    <div class="col-12 coluna-calendario">
+      <div class="dia-calendar" *ngFor="let dia of dias" [ngClass]="dia.selecionado === true ? 'dia-selecionado' : ''">
+        <span class="dian" [ngClass]="dia.selecionado === true ? 'selecionado' : ''">{{dia.diaM}}</span>
+        <span class="diat" [ngClass]="dia.selecionado === true ? 'selecionado' : ''">{{converterDiaSemana(dia.diaSem)}}</span>
+      </div>
+    </div>    
+  </div>
+  
+  <div class="row bloco-humor">
+    <div class="col-12">
+      <p class="text-bold">O que você está procurando hoje?</p>
+    </div>
+  </div>
+  
+  <div class="bloco-opcoes">
+    <div class="row linha-opcao" (click)="criarSessao()">
+        <div class="col-5 offset-1 coluna-opcao-cuidados-medicos borda-esquerda">
+          <!-- <h3>Cuidados Médicos</h3> -->
+            <div class="row">
+              <div class="col-11 offset-1">
+                <h3>Cuidados Médicos</h3>
+              </div>
+            </div>
+        </div>
+        <div class="col-5 coluna-imagem borda-direita">
+            <img src="../../assets/botao-doc24.png" />
+        </div>
+    </div>
+    <div class="row linha-opcao beneficio" (click)="navegar('/tabs/club')">
+        <div class="col-5 offset-1 coluna-imagem-beneficio borda-esquerda">
+            <img src="../../assets/botao_beneficios.png" />
+        </div>
+        <div class="col-5 coluna-opcao-beneficios borda-direita">
+            <h3>Benefícios</h3>
+        </div>
+    </div>
+    <div class="row linha-opcao" (click)="navegar('/tabs/comunidade')">
+        <div class="col-5 offset-1 coluna-opcao-saude-mental borda-esquerda">
+            <h3 class="descricao-botao">Comunidade</h3>
+        </div>
+        <div class="col-5 coluna-imagem-comunidade borda-direita">
+            <img src="../../assets/botao-comunidade.png" />
+        </div>
+    </div>
+  </div>
+  
+</ion-content>

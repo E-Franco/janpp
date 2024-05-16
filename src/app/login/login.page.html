@@ -1,0 +1,40 @@
+<ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Login</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content [fullscreen]="true" >
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large">Login</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <div class="row linha-logo">
+        <div class="col-12 coluna-logo">
+            <!-- <img src="../../assets/logo JANPP.png" /> -->
+            <!-- <img src="../../assets/logo doc24.jpeg" /> -->
+            <img />
+        </div>
+    </div>
+    <div class="row linha-login">
+        <div class="col-12">
+            <label class="text-bold">CPF:</label>
+            <input type="text" class="form-control" placeholder="Digite seu usuário" [(ngModel)]="usuario.CGC" name="CGC" formataString maxlength="14"/>
+        </div>
+        <div class="col-12 linha-input">
+            <label class="text-bold">Senha:</label>
+            <input type="password" class="form-control" placeholder="Digite a senha" [(ngModel)]="usuario.Senha" name="Senha" />
+        </div>
+        <div class="col-12 linha-input" [hidden]="usuario.PrimeiroAcesso !== true" >
+            <label class="text-bold">Confirmar Senha:</label>
+            <input type="password" class="form-control" placeholder="Digite a senha novamente" [(ngModel)]="usuario.ConfirmarSenha" name="usuario.ConfirmarSenha" />
+        </div>
+        <div class="col-12 linha-botao">
+            <button class="btn btn-primary" type="button" (click)="entrar()" *ngIf="usuario.PrimeiroAcesso !== true">Entrar</button>
+            <button class="btn btn-primary" type="button" (click)="recuperarSenha()" *ngIf="usuario.PrimeiroAcesso === true">Salvar</button>
+            <button class="btn btn-success mt-10" type="button" (click)="configurarPrimeiroAcesso()" *ngIf="usuario.PrimeiroAcesso !== true">Primeiro Acesso</button>
+        </div>
+    </div>
+</ion-content>

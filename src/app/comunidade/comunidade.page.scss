@@ -1,0 +1,73 @@
+@import "../../variaveis.scss";
+
+ion-header{
+    ion-toolbar{
+        --background: $cor-primaria;
+
+        ion-title{
+            text-align: center;
+            font-weight: bold;
+            ion-icon{
+                vertical-align: middle;
+                margin-right: 20px;
+                float: left;
+            }
+        }
+    }    
+}
+
+ion-content{
+    .linha-header{
+        background-color: $cor-primaria;
+
+        .coluna-header{
+            padding: 1% 25px;
+
+            .titulo-header{
+                font-size: 20px;
+                font-weight: bold;
+                margin-bottom: 0;
+
+                ion-icon{
+                    font-size: 20px;
+                    vertical-align: middle;
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+
+    .linha-ebook{
+        margin-top: 20px;
+        .item-ebook{
+            padding: 0 5%;
+
+            .thumb{
+                border-bottom: 1px dashed $cor-cinza-claro;
+
+                .imagem{
+                    img{
+                        width: 100%;
+                        height: 35vh;
+                        border-radius: 20px;
+                    }                    
+                }
+
+                .link-titulo{
+                    margin-top: 5px;
+                    display: flex;
+                }
+
+                .descricao{
+                    line-height: 0.875rem;
+                }
+
+                .btn{
+                    text-align: center;
+                    display: flow;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
